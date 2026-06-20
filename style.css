@@ -83,26 +83,35 @@ nav ul li ul li a {
 /*homepage css*/
 .image-row {
   display: flex;
+    justify-content: center;
   gap: 16px;
   margin: 24px 0;
 }
 
 .image-row img {
-  width: calc(33.333% - 11px);
+    display: flex;
+    justify-content: center;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   border-radius: 6px;
 }
 
 
+/*project css*/
+.cardholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-.cardheading{
+.cardheading {
   background-color: green;
 }
-.card{
-  background-color: mintcream;  
-}
 
+.card {
+  width: 50%;
+  background-color: mintcream;
+}
 /* resume css*/
 .resume {
     background: mintcream;
