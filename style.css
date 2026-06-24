@@ -219,30 +219,30 @@ nav ul li ul li a {
 }
  
 /* carousel css */
-.card.carousel-wrap {
+.carousel-wrap {
     width: 25%;
     margin: 0 auto;
 }
  
-.card.carousel-track-outer {
+.carousel-track-outer {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.12);
 }
  
-.card.carousel-track {
+.carousel-track {
     display: flex;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
  
-.card.slide {
+.slide {
     min-width: 100%;
     display: flex;
     justify-content: center;
 }
  
-.card.slide img {
+.slide img {
     height: auto;
     width: auto;
     max-width: 300px;
@@ -250,7 +250,7 @@ nav ul li ul li a {
     display: block;
 }
  
-.card.btn-prev, .btn-next {
+.btn-prev, .btn-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -269,21 +269,21 @@ nav ul li ul li a {
     z-index: 10;
 }
  
-.card.btn-prev:hover, .btn-next:hover { background: #fff; }
-.card.btn-prev { left: 10px; }
-.card.btn-next { right: 10px; }
+.btn-prev:hover, .btn-next:hover { background: #fff; }
+.btn-prev { left: 10px; }
+.btn-next { right: 10px; }
  
-.card.btn-prev::before { content: '‹'; }
-.card.btn-next::before { content: '›'; }
+.btn-prev::before { content: '‹'; }
+.btn-next::before { content: '›'; }
  
-.card.dots {
+.dots {
     display: flex;
     gap: 6px;
     justify-content: center;
     margin-top: 12px;
 }
  
-.card.dot {
+.dot {
     width: 7px;
     height: 7px;
     border-radius: 50%;
@@ -294,7 +294,7 @@ nav ul li ul li a {
     transition: background 0.2s, transform 0.2s;
 }
  
-.card.dot.active {
+.dot.active {
     background: #333;
     transform: scale(1.3);
 }
