@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Leopold Allen</title>
+
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="resume.html">Resume</a>
+            </li>
+            <li>
+                <a href="#">Projects</a>
+                <ul>
+                    <li><a href="P_imageprocessing.html">Image Processing</a></li>
+                    <li><a href="#">1.2</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Art</a>
+                <ul>
+                    <li><a href="#">2.1</a></li>
+                    <li><a href="#">2.2</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="cat.html">Cat</a>
+            </li>
+        </ul>
+    </nav>
+    <h1>Image Processing in Java</h1>
+    <p>This project involves several different experements involving image processing using java's library "BufferedImage"</p>
+    <h2>Overview:</h2>
+    <p>Uses m.java to store the main method, which defines a "processor" object, to process input and create new files as output</p>
+    <h3>Find Repository At:</h3>
+    <a href = https://github.com/CodeNinja369/imageProcessingInJava/tree/main>https://github.com/CodeNinja369/imageProcessingInJava/tree/main</a>
+    <div class = "cardholder">
+        <div class = "card">
+            <div class = "cardheading"> getFarray</div>
+            <p>creates a 1D array that stores the base 255 colour values of each pixel in an image</p>
+        </div>
+        <div class = "card">
+            <div class = "cardheading"> getParray</div>
+            <p>This method creates an array of pixel objects based on the flattened array. pixel objects store base 255 colour values, rgb values derived from the base 255, and brightness(adjusted for human  vision)</p>
+        </div>
+        <div class = "card">
+            <div class = "cardheading"> Sort1</div>
+            <p>This method uses the inbuilt java arrays.sort() method to sort the base 255 colour values of an image</p>
+            <div class="image-row">
+                <img src="p_img//demo1.jpg" alt="Demo 1">
+                <img src="p_img//demo1Out.jpg" alt="Demo 1 Output">
+            </div>
+        </div>
+        <div class = "card">
+            <div class = "cardheading"> Sort2</div>
+            <p>This method uses selection sort to sort the image's pixel array by brightness</p>
+            <div class="image-row">
+                <img src="p_img//demo1.jpg" alt="Demo 1">
+                <img src="p_img//demo1Out2.jpg" alt="Demo 1 Output 2">
+            </div>
+        </div>
+        <div class = "card">
+            <div class = "cardheading"> Sort3</div>
+            <p>This method uses selection sort to sort the image's pixel array into a checkerboard pattern based on maximising contrast using the WCAG Weber contrast formula</p>
+            <div class="image-row">
+                <img src="p_img//demo1.jpg" alt="Demo 1">
+                <img src="p_img//demo1Out3.jpg" alt="Demo 1 Output 3">
+            </div>
+        </div>
+        <div class = "card">
+            <div class = "cardheading"> obamaAlg</div>
+            <p>This method maps an array of pixels from one image onto a brightness map (where each pixel in an image is given a brightness ranking) of another image. This is best used in conjunction with sort 2, to essentially recolour an image using the colours of another image, based on brightness. This algorithm is inspired by the "Obamify" algorithm created by Spu7Nix </p>
+            <a href = https://github.com/Spu7Nix>https://github.com/Spu7Nix</a>
+            <div class="image-row">
+                <img src="p_img//demo1.jpg" alt="Demo 1">
+                <img src="p_img//demo3.jpg" alt="Demo 3">
+                <img src="p_img//demo1Out4.jpg" alt="Demo 1 Output 4">
+            </div>
+        </div>
+    </div>
+        
+    <!-- -->
+    </div>
+</body>
+</html>
