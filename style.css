@@ -2,7 +2,7 @@
     margin: 0px;
     padding: 0px;
 }
-
+ 
 body {
     background-color: #9ff092;
     display: flex;
@@ -11,15 +11,15 @@ body {
     padding: 20px;
     gap: 20px;
 }
-
+ 
 h1 {
     text-align: center;
 }
-
+ 
 p {
     text-align: center;
 }
-
+ 
 /* navbar css */
 nav {
     height: 60px;
@@ -31,14 +31,14 @@ nav {
     width: calc(100vw - 40px);
     margin: 0;
 }
-
+ 
 nav ul {
     display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
+ 
 nav ul li {
     position: relative;
     background: #425e42;
@@ -48,7 +48,7 @@ nav ul li {
       background: rgb(124, 151, 124);
     }
 }
-
+ 
 nav ul li a {
     display: block;
     font-family: Arial;
@@ -57,11 +57,11 @@ nav ul li a {
     padding: 0px 20px;
     text-decoration: none;
 }
-
+ 
 nav ul li:hover ul {
     display: block;
 }
-
+ 
 nav ul li ul {
     display: none;
     position: absolute;
@@ -71,48 +71,49 @@ nav ul li ul {
     left: 0%;
     z-index: 100;
 }
-
+ 
 nav ul li ul li {
     width: 250px;
     border-radius: 4px;
 }
-
+ 
 nav ul li ul li a {
   padding: 8px 20px;
 }
-/*homepage css*/
+ 
+/* homepage css */
 .image-row {
-  display: flex;
+    display: flex;
     justify-content: center;
-  gap: 16px;
-  margin: 24px 0;
+    gap: 16px;
+    margin: 24px 0;
 }
-
+ 
 .image-row img {
     display: flex;
     justify-content: center;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  border-radius: 6px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 6px;
 }
-
-
-/*project css*/
+ 
+/* project css */
 .cardholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
+ 
 .cardheading {
-  background-color: green;
+    background-color: green;
 }
-
+ 
 .card {
-  width: 50%;
-  background-color: mintcream;
+    width: 50%;
+    background-color: mintcream;
 }
-/* resume css*/
+ 
+/* resume css */
 .resume {
     background: mintcream;
     width: 680px;
@@ -121,17 +122,17 @@ nav ul li ul li a {
     box-shadow: 0 4px 24px rgba(0,0,0,0.13);
     margin: 0;
 }
-
+ 
 .resumeitem {
     border-bottom: 2px solid #ccc;
 }
-
+ 
 .resume-header {
     border-bottom: 3px solid #222;
     padding-bottom: 14px;
     margin-bottom: 22px;
 }
-
+ 
 .resume-header h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
@@ -142,17 +143,17 @@ nav ul li ul li a {
     margin-bottom: 8px;
     text-align: left;
 }
-
+ 
 .contact-line {
     font-size: 0.82rem;
     color: #333;
     line-height: 1.7;
 }
-
+ 
 .section {
     margin-bottom: 20px;
 }
-
+ 
 .section-title {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
@@ -165,7 +166,7 @@ nav ul li ul li a {
     align-items: center;
     gap: 8px;
 }
-
+ 
 .section-title::before {
     content: '';
     display: inline-block;
@@ -176,13 +177,13 @@ nav ul li ul li a {
     border-left: 8px solid green;
     flex-shrink: 0;
 }
-
+ 
 .section-title.emp {
     font-size: 0.9rem;
     font-weight: 700;
     letter-spacing: 0.04em;
 }
-
+ 
 .section p,
 .section li {
     font-size: 0.83rem;
@@ -190,29 +191,110 @@ nav ul li ul li a {
     line-height: 1.65;
     text-align: left;
 }
-
+ 
 .section ul {
     list-style: disc;
     padding-left: 20px;
 }
-
+ 
 .section ul li {
     margin-bottom: 1px;
 }
-
+ 
 .edu-row {
     font-size: 0.83rem;
     color: #222;
     line-height: 1.75;
 }
-
+ 
 .references {
     font-size: 0.82rem;
     color: #222;
     margin-top: 4px;
 }
-
+ 
 .references a {
     color: #2a7a2a;
     text-decoration: underline;
+}
+ 
+/* carousel css */
+.card.carousel-wrap {
+    width: 25%;
+    margin: 0 auto;
+}
+ 
+.card.carousel-track-outer {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+ 
+.card.carousel-track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+ 
+.card.slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+ 
+.card.slide img {
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    max-height: 300px;
+    display: block;
+}
+ 
+.card.btn-prev, .btn-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.85);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    color: #222;
+    transition: background 0.15s;
+    z-index: 10;
+}
+ 
+.card.btn-prev:hover, .btn-next:hover { background: #fff; }
+.card.btn-prev { left: 10px; }
+.card.btn-next { right: 10px; }
+ 
+.card.btn-prev::before { content: '‹'; }
+.card.btn-next::before { content: '›'; }
+ 
+.card.dots {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 12px;
+}
+ 
+.card.dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #bbb;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s, transform 0.2s;
+}
+ 
+.card.dot.active {
+    background: #333;
+    transform: scale(1.3);
 }
