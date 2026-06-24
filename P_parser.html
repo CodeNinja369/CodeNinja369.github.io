@@ -14,7 +14,7 @@
                 <a href="#">Projects</a>
                 <ul>
                     <li><a href="P_imageprocessing.html">Image Processing</a></li>
-                    <li><a href="#">1.2</a></li>
+                    <li><a href="P_parser.html">Calculator Parsing</a></li>
                 </ul>
             </li>
             <li>
@@ -31,7 +31,7 @@
     <h1>Calculator Recursive Descent Parser in Java</h1>
     <p>This project allows for the parsing and resolving in bidmas order, of simple integer opperations without negation (+,-,/,*)</p>
     <h2>Overview:</h2>
-    <p>uses "tokenise" to create a list of characters. Then parses tokenised list using the parser object method "Expr", that outputs a root treenode. Calls resolve method on the root, which will recursively resolve the tree of the input opperation.</p>
+    <p>calc.java acts as the main file and uses "tokenise" to create a list of Token objects. Then parses tokenised list using the parser object method "expr", that outputs a root treenode. Calls resolve method on the root, which will recursively resolve the tree of the input opperation.</p>
     <h3>Find Repository At:</h3>
     <a href="https://github.com/CodeNinja369/unGodlyCalculatorAscended.java">https://github.com/CodeNinja369/unGodlyCalculatorAscended.java</a>
         <div class="carousel-wrap">
@@ -60,7 +60,32 @@
                 </div>
                 <button class="btn-prev" id="prev" aria-label="Previous slide"></button>
                 <button class="btn-next" id="next" aria-label="Next slide"></button>
+                </div>
             </div>
+            <div class = "cardholder">
+                <div class = "card">
+                    <div class = "cardheading"> tnode package</div>
+                    <p>This package holds Treenode and all its subclasses. These classes are designed to make up and resolve the nodes and relations of the parsed tree. </p>
+                </div>
+                <div class = "card">
+                    <div class = "cardheading">evaluate()</div>
+                    <p>A generic method within the Treenode class and its subclasses. With opperands, it returns the opperands value. With opperators, it returns the evaluation of the opperators left and right with the opperator applied (eg. return this.left.evaluate() * this.right.evaluate(); for multiplication)</p>
+                </div>
+                <div class = "card">
+                    <div class = "cardheading">Token class</div>
+                    <p>Uses constructor overloading to either store ints or chars, and stores a boolean indicating which the object is.</p>
+                </div>
+                <div class = "card">
+                    <div class = "cardheading">tokenise()</div>
+                    <p>creates a list of Token objects, storing multi digit numbers or chars</p>
+                </div>
+                <div class = "card">
+                    <div class = "cardheading">Parser class</div>
+                    <p>stores a list of tokens. Recursively turns those tokens into a tree, as shown in the demonstration above, using the method scn(): which consumes a token, and the exp(), term() and factor() methods, which recursively call eachother to assertain a token's hierarchy in the tree and creating a corresponding Treenode object. Calling the expr method will create the root node and start the parsing process which stores all other tokens as nodes in the tree.</p>
+                </div>
+
+            </div>
+            
     </div>
         
 
