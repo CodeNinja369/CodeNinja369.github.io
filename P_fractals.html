@@ -35,16 +35,32 @@
             </li>
         </ul>
     </nav>
-    <h1>Creating Fractaks Using C++</h1>
+    <h1>Creating Fractals Using C++</h1>
     <p>This project uses the sfml and an L System to generate fractals (currently only a dragon curve)</p>
     <h2>Overview:</h2>
-    <p>Uses m.java to store the main method, which defines a "processor" object, to process input and create new files as output</p>
+    <p>Uses visualEngine.cpp's main method to call methods that create a set of directions generated using the L system, which is then used as specifiers for methods that define vertexes, and are placed in an array, that acts as the sfml library type "linestrip". This essentially acts as the classic programming challenge/demo turtle, which can turn or move forward leaving a line in its path. This turtle follows the generated directions to form the fractal.</p>
     <h3>Find Repository At:</h3>
     <a href = https://github.com/CodeNinja369/fractalsCPP>https://github.com/CodeNinja369/fractalsCPP</a>
     <div class = "cardholder">
         <div class = "card">
-            <div class = "cardheading"> </div>
-            <p></p>
+            <div class = "cardheading">forward()</div>
+            <p>returns a vertex positioned based on the direction and input vertex</p>
+        </div>
+        <div class = "card">
+            <div class = "cardheading">turn()</div>
+            <p>alters the direction based on current direction and turn direction. for example, if going right and turning right, the direction will be changed to down.</p>
+        </div>
+        <div class = "card">
+            <div class = "cardheading">turn()</div>
+            <p>returns a vertex positioned based on the direction and input vertex</p>
+        </div>
+        <div class = "card">
+            <div class = "cardheading">getFrac()</div>
+            <p>returns vector of ints, where each int represents an instruction (0 or 1 means forward, 2 means left, 3 means right). Iteratively rewrites the vector a specified number of times to follow the L system of the dragon curve (algorithm and output shown in the image below for number of iterations being 11)</p>
+            <div class="image-row">
+                <img src="p_frac//fractal.png" alt="Dragon Curve Algorithm">
+                <img src="p_frac//fractalOutput.png" alt="Output">
+            </div>
         </div>
         
     </div>
