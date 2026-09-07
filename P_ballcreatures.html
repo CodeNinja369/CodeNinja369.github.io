@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Leopold Allen</title>
+
+</head>
+<body>
+    <nav class="nav">
+        <ul>
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="resume.html">Resume</a>
+            </li>
+            <li>
+                <a href="#">Projects</a>
+                <ul>
+                    <li><a href="P_imageprocessing.html">Image Processing</a></li>
+                    <li><a href="P_parser.html">Calculator Parsing</a></li>
+                    <li><a href="P_fractals.html">Fractals</a></li>
+                    <li><a href="P_ballcreatures.html">Creatures</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Art</a>
+                <ul>
+                    <li><a href="#">2.1</a></li>
+                    <li><a href="#">2.2</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="cat.html">Cat</a>
+            </li>
+        </ul>
+    </nav>
+    <h1>Ball Creatures</h1>
+    <p>This project uses sfml to simulate creatures that eat eachother</p>
+    <h2>Overview:</h2>
+    <p>a ball class stores the details of each creature as an object. This ball class is used to keep track of the ball's different attributes, as well as to control it's behaviour/movement</p>
+    <h3>Find Repository At:</h3>
+    <a href = https://github.com/CodeNinja369/BallSim>https://github.com/CodeNinja369/BallSim</a>
+    <div class = "cardholder">
+        <div class = "card">
+            <div class = "cardheading"> balls.cpp</div>
+            <p>generates vector of balls at slightly random positions, at random sizes within size range, and random colours. Creates window and main simulation loop. Handles ball death, ball attacks and ball collision</p>
+        </div>
+        <div class = "card">
+            <div class = "cardheading"> ball.h</div>
+            <p>Header that defines the ball class, with all members outlined including public functions and private variables</p>
+        </div>
+        <div class = "card">
+            <div class = "cardheading"> ball.cpp</div>
+            <p>initialises all members of ball class</p>
+        </div>
+        <div class = "card">
+            <div class = "cardheading"> ball class private members</div>
+            <p>sf::Vector2&ltfloat&gt pos -- position of the ball</p>
+	        <p>sf::CircleShape circle -- sfml CircleShape object that keeps track of what is drawn to the screen to represent the ball</p>
+	        <p>int size -- radius of the ball</p>
+	        <p>float speed -- how many pixels the ball moves per update</p>
+	        <p>sf::Color colour -- sfml Color object that represents the colour of the circle</p>
+	        <p>bool dead -- keeps track of whether the ball is dead</p>
+	        <p>int dmg -- how much damage the ball does to another ball on collision</p>
+	        <p>int health -- health of a ball </p>
+	        <p>void updateCircle() -- private helper function that updates the CircleShape each time a change is made to the ball's attributes</p>
+	        <p>int internaltick -- keeps track of a ball's cooldown for damage</p>
+	        <p>float finddist(sf::Vector2&ltfloat&gt ppp, sf::Vector2&ltfloat&gt ttt) -- private helper function that finds the distance between two sfml float vector2s</p>
+        </div>
+        <div class = "card">
+            <div class = "cardheading"> ball class public members</div>
+            <p>ball(sf::Vector2&ltfloat&gt p, int s, float sp, int d, sf::Color c)-- constructor</p>
+            <p>>sf::Vector2&ltfloat&gt getPos() -- returns pos </p>
+            <p>sf::CircleShape getCircle() -- returns circle</p>
+            <p>int getSize() -- returns size</p>
+            <p>int getDMG() -- returns damage</p>
+            <p>int getHealth() -- returns health</p>
+            <p>void attack(std::vector&ltball*&gt target) -- moves ball speed pixels towards another ball</p>
+            <p>ball* findTarget(std::vector&ltball*&gt bs) -- finds closest ball to ball</p>
+            <p>bool isDead() -- returns dead</p>
+            <p>void die() -- sets dead to true</p>
+            <p>void damage(int d) -- lowers health by d</p>
+            <p>void collide(ball* b2, int t) -- checks collision between balls, moves them based on collision, damages balls collided based on t (which represents the external tick)</p>
+        </div>
+        
+</body>
+</html>
+
